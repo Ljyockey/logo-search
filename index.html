@@ -7,8 +7,28 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
+	<header>
+		<h1>Society Education Programs</h1>
+	</header>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
+	<section class=selections>
+		<select name="program">
+			<option value="" disabled selected>Program Type</option>
+			<option value="program-all">Select all</option>
+			<option value="scholarship">Scholarship Program</option>
+			<option value="loan">Loan Program</option>
+		</select>
+		<select name="education">
+			<option value="" disabled selected>Education Level</option>
+			<option value="education-all">Select all</option>
+			<option value="kindergarten">Kindergarten</option>
+			<option value="high-school">High School</option>
+		</select>
+	</section>
+
+	<section class="logos"></section>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
