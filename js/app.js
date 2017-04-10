@@ -19,6 +19,27 @@ var images = [
 		grey: 'img/AFE.png',
 		program: 'scholarship',
 		education: 'high-school'
+	},
+	{
+		alt: 'acm-2',
+		color: 'img/acm-color.png',
+		grey: 'img/acm.png',
+		program: 'loan',
+		education: 'kindergarten'
+	},
+	{
+		alt: 'AFE-2',
+		color: 'img/AFE-color.png',
+		grey: 'img/AFE.png',
+		program: 'loan',
+		education: 'high-school'
+	},
+	{
+		alt: 'aci-2',
+		color: 'img/aci-color.png',
+		grey: 'img/aci.png',
+		program: 'loan',
+		education: 'kindergarten'
 	}];
 
 function displayImages() {
@@ -34,31 +55,29 @@ function displayImages() {
 function getSearchItems() {
 	$('form').submit(function(e) {
 		e.preventDefault();
+		displayImages();
 		var searchProgram = $('select[name=program').val();
 		var searchEducation = $('select[name=education').val();
-		getElementsToColorize(searchProgram, searchEducation);
+		displayColor(searchProgram, searchEducation);
 	})
 }
 
-function getElementsToColorize(p, e) {
-	var colorize = [];
+function displayColor(p, e) {
+	var colorize = '';
 	$('img').each(function() {
-		if ($(this).data('program') === p || $(this).data('education') === e) {
-			colorize.push($(this));
+		if ($(this).data('program') === p && $(this).data('education') === e) {
+			colorize = $(this).attr('alt');
+			var c = getElementsToColorize(colorize);
+			$(this).attr('src', c.color);
 		}
 	})
-	displayColor(colorize);
 }
 
-function displayColor(elements) {
-	console.log(elements);
-	for (var i = 0; i < elements.length; i++) {
-		images.forEach(function(item) {
-			console.log(elements[i]);
-			if (item.alt === elements[i][0].attr('alt')) {
-				debugger;
-			}
-		})
+function getElementsToColorize(element) {
+	for (var i = 0; i < images.length; i++) {
+		if (images[i].alt === element) {
+			return images[i];
+		}
 	}
 }
 
