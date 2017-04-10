@@ -52,6 +52,14 @@ function getElementsToColorize(p, e) {
 
 function displayColor(elements) {
 	console.log(elements);
+	for (var i = 0; i < elements.length; i++) {
+		images.forEach(function(item) {
+			console.log(elements[i]);
+			if (item.alt === elements[i][0].attr('alt')) {
+				debugger;
+			}
+		})
+	}
 }
 
 $(function() {
