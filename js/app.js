@@ -36,12 +36,22 @@ function getSearchItems() {
 		e.preventDefault();
 		var searchProgram = $('select[name=program').val();
 		var searchEducation = $('select[name=education').val();
-		displayColor(searchProgram, searchEducation);
+		getElementsToColorize(searchProgram, searchEducation);
 	})
 }
 
-function displayColor(p, e) {
-	
+function getElementsToColorize(p, e) {
+	var colorize = [];
+	$('img').each(function() {
+		if ($(this).data('program') === p || $(this).data('education') === e) {
+			colorize.push($(this));
+		}
+	})
+	displayColor(colorize);
+}
+
+function displayColor(elements) {
+	console.log(elements);
 }
 
 $(function() {
