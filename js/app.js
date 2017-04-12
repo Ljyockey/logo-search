@@ -53,24 +53,58 @@ function displayImages() {
 }
 
 function getSearchItems() {
-	$('form').submit(function(e) {
+	$('form').on('submit', function(e) {
 		e.preventDefault();
 		displayImages();
 		var searchProgram = $('select[name=program').val();
+		if (searchProgram === 'program-all') {
+			searchProgram = null;
+		}
 		var searchEducation = $('select[name=education').val();
+		if (searchEducation === 'education-all') {
+			searchEducation === null;
+		}
 		displayColor(searchProgram, searchEducation);
 	})
 }
 
 function displayColor(p, e) {
+	debugger;
 	var colorize = '';
-	$('img').each(function() {
-		if ($(this).data('program') === p && $(this).data('education') === e) {
+	if (p !== null && e !== null) {
+		$('img').each(function() {
+			if ($(this).data('program') === p && $(this).data('education') === e) {
+				colorize = $(this).attr('alt');
+				var c = getElementsToColorize(colorize);
+				$(this).attr('src', c.color);
+			}
+		})
+	}
+	else if (p === null && e !== null) {
+		$('img').each(function() {
+			if ($(this).data('education') === e) {
+				colorize = $(this).attr('alt');
+				var c = getElementsToColorize(colorize);
+				$(this).attr('src', c.color);
+			}
+		})
+	}
+	else if (p !== null && e === null) {
+		$('img').each(function() {
+			if ($(this).data('program') === p) {
+				colorize = $(this).attr('alt');
+				var c = getElementsToColorize(colorize);
+				$(this).attr('src', c.color);
+			}
+		})
+	}
+	else {
+		$('img').each(function() {
 			colorize = $(this).attr('alt');
 			var c = getElementsToColorize(colorize);
 			$(this).attr('src', c.color);
-		}
-	})
+		});
+	}
 }
 
 function getElementsToColorize(element) {
