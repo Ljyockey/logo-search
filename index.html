@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" description="width=device-width">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -12,14 +13,16 @@
 		<h1>Society Education Programs</h1>
 	</header>
 
-	<section class=selections>
-		<form>
-		<select name="program" class="selectpicker">
+	<section class="selections">
+		<form class="form-horizontal" id="bootstrapSelectForm">
+		<div class="selectContainer">
+		<select name="program" title="Program Type">
 			<option value="" disabled selected>Program Type</option>
 			<option value="program-all">Select all</option>
 			<option value="scholarship">Scholarship Program</option>
 			<option value="loan">Loan Program</option>
 		</select>
+		</div>
 		<select name="education" class="selectpicker">
 			<option value="" disabled selected>Education Level</option>
 			<option value="education-all">Select all</option>
@@ -33,6 +36,7 @@
 	<section class="logos"></section>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
