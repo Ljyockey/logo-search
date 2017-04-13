@@ -2,7 +2,7 @@ h1 {
 	color: #9f222a;
 	font-family: 'Dancing Script', cursive;
 	text-align: center;
-	margin-top: 150px;
+	margin-top: 120px;
 }
 
 main {
@@ -41,12 +41,16 @@ button {
 	background-color: #9f222a;
 	color: white;
 	display: block;
-	margin: 30px auto 20px auto;
+	margin: 40px auto 20px auto;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 img {
 	display: inline-block;
 	margin-right: 100px;
-	margin-left: 50px;
+	margin-left: 85px;
 	margin-top: 50px;
 }
