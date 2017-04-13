@@ -46,21 +46,21 @@ var images = [
 		color: 'img/AFE-color.png',
 		grey: 'img/AFE.png',
 		program: 'scholarship',
-		education: 'high-school'
+		education: 'kindergarten'
 	},
 	{
 		alt: 'aci-3',
 		color: 'img/aci-color.png',
 		grey: 'img/aci.png',
 		program: 'scholarship',
-		education: 'kindergarten'
+		education: 'high-school'
 	},
 	{
 		alt: 'acm-3',
 		color: 'img/acm-color.png',
 		grey: 'img/acm.png',
 		program: 'loan',
-		education: 'high-school'
+		education: 'kindergarten'
 	}];
 
 function displayImages() {
