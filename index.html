@@ -14,27 +14,29 @@
 		<h1>Society Education Programs</h1>
 	</header>
 
-	<section class="selections">
-		<form class="form-horizontal" id="bootstrapSelectForm">
-		<div class="selectContainer">
-		<select name="program" title="Program Type">
-			<option value="" disabled selected>Program Type</option>
-			<option value="program-all">Select all</option>
-			<option value="scholarship">Scholarship Program</option>
-			<option value="loan">Loan Program</option>
-		</select>
-		</div>
-		<select name="education" class="selectpicker">
-			<option value="" disabled selected>Education Level</option>
-			<option value="education-all">Select all</option>
-			<option value="kindergarten">Kindergarten</option>
-			<option value="high-school">High School</option>
-		</select>
-		<button type="submit">Search</button>
-		</form>
-	</section>
+	<main>
 
-	<section class="logos"></section>
+		<section class="selections">
+			<form class="form-horizontal" id="bootstrapSelectForm">
+			<select name="program" title="Program Type">
+				<option value="" disabled selected>Program Type</option>
+				<option value="program-all">Select all</option>
+				<option value="scholarship">Scholarship Program</option>
+				<option value="loan">Loan Program</option>
+			</select>
+			<select name="education" class="selectpicker">
+				<option value="" disabled selected>Education Level</option>
+				<option value="education-all">Select all</option>
+				<option value="kindergarten">Kindergarten</option>
+				<option value="high-school">High School</option>
+			</select>
+			<button type="submit" name="search">Search</button>
+			</form>
+		</section>
+
+		<section class="logos"></section>
+
+	</main>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
