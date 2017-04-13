@@ -21,6 +21,7 @@ form {
 select {
 	display: inline;
 	width: 365px;
+	color: grey;
 }
 
 select[name=program] {
