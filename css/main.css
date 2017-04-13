@@ -1,10 +1,17 @@
 h1 {
 	color: #9f222a;
-	font-family: cursive;
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+	margin-top: 150px;
 }
 
 form {
 	background-color: #f1eff0;
+}
+
+select, button {
+	font-family: 'Source Code Pro', monospace;
+	text-transform: uppercase;
 }
 
 button {
