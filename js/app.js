@@ -77,11 +77,11 @@ function getSearchItems() {
 	$('form').on('submit', function(e) {
 		e.preventDefault();
 		displayImages();
-		var searchProgram = $('select[name=program').val();
+		var searchProgram = $('select[name=program]').val();
 		if (searchProgram === 'program-all') {
 			searchProgram = null;
 		}
-		var searchEducation = $('select[name=education').val();
+		var searchEducation = $('select[name=education]').val();
 		if (searchEducation === 'education-all') {
 			searchEducation = null;
 		}
