@@ -5,8 +5,31 @@ h1 {
 	margin-top: 150px;
 }
 
+main {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 form {
 	background-color: #f1eff0;
+	padding-top: 100px;
+	padding-bottom: 10px;
+}
+
+select {
+	display: inline;
+	width: 365px;
+}
+
+select[name=program] {
+	float: left;
+	margin-left: 20px;
+}
+
+select[name=education] {
+	float: right;
+	margin-right: 20px;
 }
 
 select, button {
@@ -17,4 +40,13 @@ select, button {
 button {
 	background-color: #9f222a;
 	color: white;
+	display: block;
+	margin: 30px auto 20px auto;
+}
+
+img {
+	display: inline-block;
+	margin-right: 100px;
+	margin-left: 50px;
+	margin-top: 50px;
 }
