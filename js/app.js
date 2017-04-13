@@ -40,6 +40,27 @@ var images = [
 		grey: 'img/aci.png',
 		program: 'loan',
 		education: 'kindergarten'
+	},
+	{	
+		alt: 'AFE-3',
+		color: 'img/AFE-color.png',
+		grey: 'img/AFE.png',
+		program: 'scholarship',
+		education: 'high-school'
+	},
+	{
+		alt: 'aci-3',
+		color: 'img/aci-color.png',
+		grey: 'img/aci.png',
+		program: 'scholarship',
+		education: 'kindergarten'
+	},
+	{
+		alt: 'acm-3',
+		color: 'img/acm-color.png',
+		grey: 'img/acm.png',
+		program: 'loan',
+		education: 'high-school'
 	}];
 
 function displayImages() {
@@ -62,14 +83,13 @@ function getSearchItems() {
 		}
 		var searchEducation = $('select[name=education').val();
 		if (searchEducation === 'education-all') {
-			searchEducation === null;
+			searchEducation = null;
 		}
 		displayColor(searchProgram, searchEducation);
 	})
 }
 
 function displayColor(p, e) {
-	debugger;
 	var colorize = '';
 	if (p !== null && e !== null) {
 		$('img').each(function() {
