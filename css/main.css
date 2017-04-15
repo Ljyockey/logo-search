@@ -2,7 +2,7 @@ h1 {
 	color: #9f222a;
 	font-family: 'Dancing Script', cursive;
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 80px;
 	margin-bottom: 30px;
 }
 
@@ -50,9 +50,17 @@ button:hover {
 	cursor: pointer;
 }
 
+.logos {
+	margin-bottom: 30px;
+}
+
 img {
 	display: inline-block;
 	margin-right: 100px;
 	margin-left: 85px;
 	margin-top: 50px;
+}
+
+footer {
+	margin-bottom: 10px;
 }
